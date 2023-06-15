@@ -1,18 +1,18 @@
 // Creation of tree using c
 #include<stdio.h>
 #include<stdlib.h>
-struct root
+struct node
 {
     int data;
-    struct root*left;
-    struct root*right;
+    struct node*left;
+    struct node*right;
 };
 
 // Method to create nodes with corresponding values
-struct root * creationOfTree(int value)
+struct node * creationOfTree(int value)
 {
-    struct root*n;
-    n=(struct root*)malloc(sizeof(struct root));
+    struct node*n;
+    n=(struct node*)malloc(sizeof(struct node));
     n->data=value;
     n->left=NULL;
     n->right=NULL;
@@ -20,10 +20,10 @@ struct root * creationOfTree(int value)
 }
 int main()
 {
-    // Creating struct root type pointers for nodes
-    struct root*n1=creationOfTree(5);
-    struct root*n2=creationOfTree(2);
-    struct root*n3=creationOfTree(6);
+    // Creating struct node type pointers for nodes
+    struct node*n1=creationOfTree(5);
+    struct node*n2=creationOfTree(2);
+    struct node*n3=creationOfTree(6);
     
     // Linking of nodes to form the tree
     n1->left=n2;
