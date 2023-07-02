@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class stringComparison
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter 1st string");
+        String st=in.nextLine();
+        String  x=st.toUpperCase();
+        System.out.println("Enter  2nd string");
+        String st1=in.nextLine();
+        String y=st1.toUpperCase();
+        if(x.compareTo(y)<0)
+            System.out.println(st+" is less than "+st1);
+        if(x.compareTo(y)>0)
+            System.out.println(st+" is more than "+st1);
+        if(x.compareTo(y)==0)
+            System.out.println(st+" is equal to "+st1);
+    }
+}
